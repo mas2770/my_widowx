@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="arbotix" pkg="arbotix_python" type="arbotix_driver" output="screen">
+    <rosparam file="$(find widowx_arm_controller)/config/arm.yaml" command="load" />
+  </node>
+  <node name="gripper_controller" pkg="widowx_arm_controller" type="widowx_gripper.py" output="screen"/>
+  <include file="$(find foxglove_bridge)/launch/foxglove_bridge.launch">
+    <arg name="port" value="8765" />
+  </include>
+</launch>
