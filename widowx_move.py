@@ -96,7 +96,7 @@ class MoveGroupPythonInterfaceTutorial(object):
         joint_goal[0] = new_joint_goal[1]
         joint_goal[1] = new_joint_goal[2]-1.05
         joint_goal[2] = new_joint_goal[3]+1.48
-        joint_goal[3] = new_joint_goal[4]-3.39
+        joint_goal[3] = new_joint_goal[4]-3.12
         joint_goal[4] = 0.0
         move_group.go(joint_goal, wait=True)
         move_group.stop()
@@ -231,8 +231,10 @@ class MoveGroupPythonInterfaceTutorial(object):
 def main(): 
     tutorial = MoveGroupPythonInterfaceTutorial()
     # tutorial.go_to_pose_goal(0.3,0.4,0.3)
-    tutorial.go_to_joint_state(0.3,0.3,0.2)
-    tutorial.go_to_joint_state(0.3,-0.3,0.2)
+    while(1):
+        tutorial.go_to_joint_state(0.3,0.3,0.3)
+        tutorial.go_to_joint_state(0.3,-0.3,0.3)
+    # tutorial.go_to_joint_state(0.3,-0.3,0.2)
     # tutorial.home()
     # tutorial.open_close("open")
     # tutorial.open_close("close")
