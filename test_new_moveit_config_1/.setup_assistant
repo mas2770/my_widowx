@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: widowx_arm_description
+    relative_path: robots/widowx_arm.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/widowx_arm.srdf
+  CONFIG:
+    author_name: ff
+    author_email: ff@ff.com
+    generated_timestamp: 1709329948
