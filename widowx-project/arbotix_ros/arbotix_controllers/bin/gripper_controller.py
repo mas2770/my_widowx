@@ -28,7 +28,7 @@
 """
 
 import rospy, actionlib
-import thread
+from threading import thread
 
 from control_msgs.msg import GripperCommandAction
 from sensor_msgs.msg import JointState
